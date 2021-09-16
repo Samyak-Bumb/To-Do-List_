@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(315deg, rgb(224,196,252) 0%, rgb(142,196,252) 100%);
+}
+header{
+  font-size: 2rem;
+}
+header, form{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input, form button{
+  padding: 0.5rem;
+  font-size: 25px;
+  border: none;
+  background: white;
+}
+form button{
+  color: #ff6f47;
+  /* background: #f7fffe; */
+  transition: 0.5s ease;
+}
+form button:hover{
+  cursor: pointer;
+  background: #ff6f47;
+  color: white;
+  width: 50px;
+}
+.todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list{
+  min-width: 30%;
+  list-style: none;
+}
+.todo{
+  display: flex;
+  margin: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  color: black;
+  background: white;
+  transition: all 1s ease;
+}
+.filter-todo{
+  border-radius: 8px;
+  padding: 1rem;
+}
+.todo li{
+  flex: 1;
+}
+.trash-btn, .complete-btn{
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  background: #ff6f47;
+}
+.trash-btn, .complete-btn:hover{
+  cursor: pointer;
+}
+.complete-btn{
+  background: rgb(11, 212, 162);
+}
+.todo-item{
+  padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check{
+  pointer-events: none;
+}
+.fall{
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+/*CUSTOM SELECTOR */
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+/* Custom Select */
+.select{
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select{
+  width: 12rem;
+  color: #ff6f47;
+}
+select:hover{
+  cursor: pointer;
+}
+/* Arrow */
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  padding: 1rem;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  background: #ff6f47;
+}
+.select::after:hover{
+  cursor: pointer;
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background: #e0c4fc;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100px;
+  background: #FF4081;
+}
